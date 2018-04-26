@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:edge
 LABEL maintainer="b00za@pm.me"
 
 RUN apk add --no-cache tor && \

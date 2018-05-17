@@ -1,5 +1,5 @@
-FROM alpine
-LABEL maintainer="b00za@pm.me"
+FROM alpine:3.7
+LABEL maintainer="b00za@disroot.org"
 
 RUN apk add --no-cache tor && \
     echo "SocksPort 0.0.0.0:9050" > /etc/tor/torrc && \
@@ -11,5 +11,5 @@ VOLUME ["/var/lib/tor"]
 
 USER tor
 
-ENTRYPOINT ["/usr/bin/tor"]
+CMD ["/usr/bin/tor"]
 
